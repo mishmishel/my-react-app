@@ -12,7 +12,7 @@ function NewDiaryEntry() {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setEntry(prevEntry => ({
-        ...prevEntry,
+        ...prevEntry, /* Spread operator creates copy of current entry state object and updates property by name with new value */
         [name]: value
     }));
     }
@@ -44,22 +44,23 @@ function NewDiaryEntry() {
     return (
 
         <div className="diary-container">
-            <h1>Enter your new diary entry!</h1>; 
+            <h1>Enter your new diary entry!</h1>
 
+            <div className="form-container">
             <form onSubmit={handleSubmit}>
-                <label>Date:</label>
+                <label className="labels">Date:</label>
                 <input 
                     name="date"
                     value={entry.date}
                     onChange={handleInputChange}
                 />
-                <label>Title:</label>
+                <label className="labels">Title:</label>
                 <input 
                     name="title"
                     value={entry.title}
                     onChange={handleInputChange}
                 />
-                <label>Content:</label>
+                <label className="labels">Dear Diary...</label>
                 <textarea
                     name="content"
                     value={entry.content}
@@ -67,6 +68,7 @@ function NewDiaryEntry() {
                 />
                 <button type="submit">Submit Entry</button>
             </form>
+            </div>
 
         </div>
 

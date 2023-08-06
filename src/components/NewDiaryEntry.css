@@ -9,6 +9,49 @@
   h1 {
     font-size: 2.5rem;
     color: #2e2e2e;
-    margin-bottom: 20px;
   }
+
+  .form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto; /* Center align the form horizontally */
+    margin-top: 0px;
+}
+
+.form-container label {
+    font-weight: bold;
+    display: block;
+    padding-bottom: 10px; /* Add more space between label and input field */
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffb53f;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.form-container textarea {
+    min-height: 150px;
+}
+
+.form-container button {
+    background-color: #ffb53f;
+    color: #fff;
+    border: none;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #ffe3b6;
+}
 
