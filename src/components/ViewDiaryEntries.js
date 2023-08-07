@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import EntryItem from "./EntryItem";
+import "./ViewDiaryEntries.css";
 
 function ViewDiaryEntries() {
 
@@ -20,9 +21,9 @@ function ViewDiaryEntries() {
     )); 
 
     return ( 
-        <div id="entries">
+        <div className="entry-container">
             <h1>Look at Diary Entries!</h1> 
-            <div>{entryItems}</div>
+            <div id="entries">{entryItems}</div>
         </div>
     );
 }
