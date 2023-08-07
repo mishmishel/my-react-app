@@ -32,11 +32,16 @@ function NewDiaryEntry() {
         .then(response => response.json())
         .then(data => {
             console.log("Entry created:", data);
-            // You can reset the form or perform other actions upon successful submission
+
+            setEntry({
+                title: "",
+                date: "",
+                content: ""
+            }); // Resetting input boxes to blank after submission by changing state
+
         })
         .catch(error => {
             console.error("Error creating entry:", error);
-            // Handle error (e.g., show a notification to the user)
         });
 
     }
