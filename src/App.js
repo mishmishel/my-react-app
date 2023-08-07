@@ -5,8 +5,6 @@ import Home from './components/Home'; // Import your other components
 import NewDiaryEntry from './components/NewDiaryEntry';
 import ViewDiaryEntries from './components/ViewDiaryEntries'; 
 
-import './App.css';
-
 function App() {
   return (
     <div>
@@ -21,7 +19,7 @@ function App() {
           <NewDiaryEntry/>
         </Route>
 
-        <Route exact path="/viewdiaryentries">
+        <Route path="/viewdiaryentries">
           <ViewDiaryEntries/>
         </Route>
 

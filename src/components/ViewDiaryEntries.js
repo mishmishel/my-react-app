@@ -6,10 +6,10 @@ function ViewDiaryEntries() {
     const [entries, setEntries] = useState([]);
 
     useEffect(() => {
-        fetch(" http://localhost:3000/entries")
+        fetch("http://localhost:4000/entries")
             .then(r => r.json())
-            .then(data => setEntries(data.entries))
-    }, [])
+            .then(data => setEntries(data))
+    }, []);
 
     const entryItems = entries.map((entry) => (
         <EntryItem
@@ -24,7 +24,8 @@ function ViewDiaryEntries() {
             <h1>Look at Diary Entries!</h1> 
             <div>{entryItems}</div>
         </div>
-    )
+    );
 }
 
 export default ViewDiaryEntries; 
+

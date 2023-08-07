@@ -4,39 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import db from "db.json"
-
-function runServer() {
-  createServer({
-    serializers: {
-      application: ActiveModelSerializer,
-    },
-
-    models: makeModels(db),
-
-    seeds(server) {
-      for (const resource in db) {
-        const model = singularize(resource);
-        for (const item of db[resource]) {
-          server.create(model, item);
-        }
-      }
-    },
-
-    routes() {
-      this.logging = false;
-
-      for (const resource in db) {
-        this.get(`/${resource}`);
-        this.post(`/${resource}`);
-        this.patch(`/${resource}/:id`);
-        this.del(`/${resource}/:id`);
-      }
-    },
-  });
-}
-
-export default runServer;
 
 ReactDOM.render(
   <BrowserRouter>

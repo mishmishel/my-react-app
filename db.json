@@ -11,6 +11,12 @@
       "date": "2023-08-02",
       "content": "This is the content of entry 2.",
       "id": 2
+    },
+    {
+      "title": "This is my third entry!",
+      "date": "08/08/2023",
+      "content": "This is the information I provided in my third entry. ",
+      "id": 3
     }
   ]
 }

@@ -20,7 +20,7 @@ function NewDiaryEntry() {
     function handleSubmit(event) {
         event.preventDefault()
 
-        fetch("http://localhost:3000/entries", {
+        fetch("http://localhost:4000/entries", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
