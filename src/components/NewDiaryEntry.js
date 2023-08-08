@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom"; // hook to redirect users 
 import './NewDiaryEntry.css';
 
 function NewDiaryEntry() {
@@ -8,6 +9,8 @@ function NewDiaryEntry() {
         date: "",
         content: ""
     })
+
+    const history = useHistory();
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -31,13 +34,14 @@ function NewDiaryEntry() {
 
         .then(response => response.json())
         .then(data => {
-            console.log("Entry created:", data);
 
-            setEntry({
+            history.push(`/viewdiaryentries/${data.id}`)
+
+           /* setEntry({
                 title: "",
                 date: "",
                 content: ""
-            }); // Resetting input boxes to blank after submission by changing state
+            }); // Resetting input boxes to blank after submission by changing state */
 
         })
         .catch(error => {

@@ -15,7 +15,7 @@ function Navbar() {
         </NavLink>
 
         <NavLink to="/viewdiaryentries" className="right-link">
-            View Diary Entry
+            View Diary Entries
         </NavLink>
 
        </div>

@@ -32,7 +32,7 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ffb53f;
+    border: 1.5px solid #ffb53f;
     border-radius: 4px;
     box-sizing: border-box; /* Include padding and border in the width */
 }

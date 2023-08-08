@@ -5,7 +5,6 @@ import EntryItemDetails from "./EntryItemDetails";
 function EntryDetails() {
     const [entry, setEntry] = useState(null);
     const params = useParams()
-    const id = 1; 
 
     useEffect(() => {
         fetch(`http://localhost:4000/entries/${params.id}`)
@@ -13,11 +12,11 @@ function EntryDetails() {
             .then(data => setEntry(data))
     }, [params.id])
 
-    if(!entry) return <h2>Loading...</h2>
+    if(!entry) return <h2 id="loading">Loading...</h2>
 
     return (
         <section>
-            <div id="entrydetails">
+            <div className="details-container">
                 <EntryItemDetails 
                 key={entry.id}
                 title={entry.title}

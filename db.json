@@ -29,6 +29,12 @@
       "date": "07/08/2023",
       "content": "Today, I went to the gym :)",
       "id": 5
+    },
+    {
+      "title": "Entry 5",
+      "date": "09/08/2023",
+      "content": "Today, I used the usehistory() hook. ",
+      "id": 6
     }
   ]
 }
