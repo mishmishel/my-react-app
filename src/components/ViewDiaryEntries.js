@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import EntryItem from "./EntryItem";
+import ViewDiaryItem from "./ViewDiaryItem";
 import "./ViewDiaryEntries.css";
 
 function ViewDiaryEntries() {
@@ -13,8 +13,9 @@ function ViewDiaryEntries() {
     }, []);
 
     const entryItems = entries.map((entry) => (
-        <EntryItem
+        <ViewDiaryItem
         key={entry.id}
+        id={entry.id}
         title={entry.title}
         date={entry.date}
         />

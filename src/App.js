@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'; // Import the Navbar component
 import Home from './components/Home'; // Import your other components
 import NewDiaryEntry from './components/NewDiaryEntry';
 import ViewDiaryEntries from './components/ViewDiaryEntries'; 
+import EntryDetails from './components/EntryDetails';
 
 function App() {
   return (
@@ -19,8 +20,16 @@ function App() {
           <NewDiaryEntry/>
         </Route>
 
+        <Route path="/viewdiaryentries/:id">
+          <EntryDetails />
+        </Route>
+
         <Route path="/viewdiaryentries">
           <ViewDiaryEntries/>
+        </Route>
+
+        <Route path="*">
+          <h1>404 not found</h1>
         </Route>
 
       </Switch>
