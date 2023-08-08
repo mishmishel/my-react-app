@@ -46,6 +46,17 @@ function NewDiaryEntry() {
 
     }
 
+    // Not allowing users to submit if they don't enter anything
+
+    const inputBoxes = document.querySelectorAll(".input-box");
+    let disableButton = false;
+
+    inputBoxes.forEach(entry => {
+        if (entry.value.trim() === "") {
+            disableButton = true;
+        }
+    });
+
     return (
 
         <div className="diary-container">
@@ -54,24 +65,24 @@ function NewDiaryEntry() {
             <div className="form-container">
             <form onSubmit={handleSubmit}>
                 <label className="labels">Date:</label>
-                <input 
+                <input className="input-box"
                     name="date"
                     value={entry.date}
                     onChange={handleInputChange}
                 />
                 <label className="labels">Title:</label>
-                <input 
+                <input className="input-box"
                     name="title"
                     value={entry.title}
                     onChange={handleInputChange}
                 />
                 <label className="labels">Dear Diary...</label>
-                <textarea
+                <textarea className="input-box"
                     name="content"
                     value={entry.content}
                     onChange={handleInputChange}
                 />
-                <button type="submit">Submit Entry</button>
+                <button id="submit-button" disabled={disableButton} type="submit">Submit Entry</button>
             </form>
             </div>
 

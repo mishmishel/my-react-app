@@ -17,6 +17,18 @@
       "date": "08/08/2023",
       "content": "This is the information I provided in my third entry. ",
       "id": 3
+    },
+    {
+      "title": "I was born!",
+      "date": "14/05/2004",
+      "content": "Hi, I am born!",
+      "id": 4
+    },
+    {
+      "title": "Hello world!",
+      "date": "07/08/2023",
+      "content": "Today, I went to the gym :)",
+      "id": 5
     }
   ]
 }
