@@ -35,6 +35,18 @@
       "date": "09/08/2023",
       "content": "Today, I used the usehistory() hook. ",
       "id": 6
+    },
+    {
+      "title": "meow",
+      "date": "14/05/2004",
+      "content": "i love to meow",
+      "id": 7
+    },
+    {
+      "title": "This is my last entry",
+      "date": "13/05/2022",
+      "content": "Today, I went to the mall and I saw a really cute boy! But! He vomitted all over the kmart. It was so disgusting. ",
+      "id": 8
     }
   ]
 }

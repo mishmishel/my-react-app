@@ -5,6 +5,7 @@
     justify-content: center; /* Align left and right */
     align-items: center;
     padding: 20px 20px;
+    margin: 0 auto;
   }
   
   /* Links within the navbar class */
@@ -24,19 +25,17 @@
   }
   
   .left-link {
-    padding-left: 5px;
-    margin-left: 70px;
+    margin-left: 100px;
     margin-right: 50px;
   }
 
   .right-link {
-    margin-left: 50px;
+    margin-left: 25px;
     margin-right: 50px;
   }
 
   .middle-link {
-    align-items: center;
-    margin-left: 70px;
-    margin-right: 50px;
+    margin-left: 30px;
+    margin-right: 25px;
   }
 

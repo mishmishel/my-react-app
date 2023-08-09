@@ -64,3 +64,20 @@ h1 {
     margin-bottom: 20px;
     text-align: center;
 }
+
+#back-button {
+    background-color:  #606060;
+    border: 2px solid  rgb(208, 207, 207);
+    color: rgb(208, 207, 207);
+    font-size: 1em;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 15px;
+    width: 100px; 
+}
+
+#back-button:hover {
+    color:  #ffb53f;
+    border: 2px solid #ffb53f;
+}
