@@ -45,7 +45,7 @@ function NewDiaryEntry() {
 
         })
         .catch(error => {
-            console.error("Error creating entry:", error);
+            console.error("Error:", error);
         });
 
     }
@@ -73,6 +73,7 @@ function NewDiaryEntry() {
                     name="date"
                     value={entry.date}
                     onChange={handleInputChange}
+                    type="date"
                 />
                 <label className="labels">Title:</label>
                 <input className="input-box"

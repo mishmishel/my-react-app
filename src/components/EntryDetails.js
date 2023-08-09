@@ -24,7 +24,7 @@ function EntryDetails() {
                 date={entry.date}
                 content={entry.content}
             />
-            <button id="back-button" onClick={() => history.push("/viewdiaryentries")}>Return</button>
+            <button id="back-button" onClick={() => history.push("/viewdiaryentries")}>All Entries</button>
         </div>
        
     );

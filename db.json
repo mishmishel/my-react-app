@@ -2,51 +2,15 @@
   "entries": [
     {
       "title": "Entry 1",
-      "date": "2023-08-01",
-      "content": "This is the content of entry 1.",
+      "date": "2023-08-09",
+      "content": "Content of Entry 1",
       "id": 1
     },
     {
       "title": "Entry 2",
-      "date": "2023-08-02",
-      "content": "This is the content of entry 2.",
+      "date": "2023-08-07",
+      "content": "This is the content of entry 2. ",
       "id": 2
-    },
-    {
-      "title": "This is my third entry!",
-      "date": "08/08/2023",
-      "content": "This is the information I provided in my third entry. ",
-      "id": 3
-    },
-    {
-      "title": "I was born!",
-      "date": "14/05/2004",
-      "content": "Hi, I am born!",
-      "id": 4
-    },
-    {
-      "title": "Hello world!",
-      "date": "07/08/2023",
-      "content": "Today, I went to the gym :)",
-      "id": 5
-    },
-    {
-      "title": "Entry 5",
-      "date": "09/08/2023",
-      "content": "Today, I used the usehistory() hook. ",
-      "id": 6
-    },
-    {
-      "title": "meow",
-      "date": "14/05/2004",
-      "content": "i love to meow",
-      "id": 7
-    },
-    {
-      "title": "This is my last entry",
-      "date": "13/05/2022",
-      "content": "Today, I went to the mall and I saw a really cute boy! But! He vomitted all over the kmart. It was so disgusting. ",
-      "id": 8
     }
   ]
 }
