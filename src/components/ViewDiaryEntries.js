@@ -30,10 +30,10 @@ function ViewDiaryEntries() {
         <div className="entry-container">
             <h1>Look at Diary Entries!</h1> 
             <div className="date-filter">
-                <label>Start Date:</label>
-                <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
-                <label>End Date:</label>
-                <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+                <label className="date-text">Start Date:</label>
+                <input className="date-box" type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+                <label className="date-text">End Date:</label>
+                <input className="date-box" type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
             </div>
             <div id="entries">{entryItems}</div>
         </div>
@@ -41,4 +41,5 @@ function ViewDiaryEntries() {
 }
 
 export default ViewDiaryEntries; 
+
 
