@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
-import Navbar from './components/Navbar'; // Import the Navbar component
-import Home from './components/Home'; // Import your other components
+import Navbar from './components/Navbar'; 
+import Home from './components/Home'; 
 import NewDiaryEntry from './components/NewDiaryEntry';
 import ViewDiaryEntries from './components/ViewDiaryEntries'; 
 import EntryDetails from './components/EntryDetails';
@@ -16,7 +16,7 @@ function App() {
           <Home/>
         </Route>
 
-        <Route exact path="/newdiaryentry">
+        <Route path="/newdiaryentry">
           <NewDiaryEntry/>
         </Route>
 
