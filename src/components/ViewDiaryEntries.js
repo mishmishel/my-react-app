@@ -18,8 +18,8 @@ function ViewDiaryEntries() {
         if (!startDate || !endDate) {
           return true; // If no date range is selected, show all entries
         }
-        const entryDate = new Date(entry.date);
-        return entryDate >= new Date(startDate) && entryDate <= new Date(endDate);
+        const entryDate = new Date(entry.date); // converts entry.date into a new Date object 
+        return entryDate >= new Date(startDate) && entryDate <= new Date(endDate); // checks if entryDate falls within selected date range
       });
 
       const entryItems = filteredEntries.map((entry) => (

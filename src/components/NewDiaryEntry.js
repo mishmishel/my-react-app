@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom"; // hook to redirect users 
 import './NewDiaryEntry.css';
 
@@ -12,6 +12,8 @@ function NewDiaryEntry() {
 
     const history = useHistory();
 
+    const [disableButton, setDisableButton] = useState(true);
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setEntry(prevEntry => ({
@@ -19,6 +21,12 @@ function NewDiaryEntry() {
         [name]: value
     }));
     }
+
+    useEffect(() => {
+        // Check if any of the input fields are empty
+        const isEmpty = Object.values(entry).some((value) => value.trim() === "");
+        setDisableButton(isEmpty); // update button state
+    }, [entry]); // watch for changes in state of entry
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -50,17 +58,6 @@ function NewDiaryEntry() {
 
     }
 
-    // Not allowing users to submit if they don't enter anything
-
-    const inputBoxes = document.querySelectorAll(".input-box");
-    let disableButton = false;
-
-    inputBoxes.forEach(entry => {
-        if (entry.value.trim() === "") {
-            disableButton = true;
-        }
-    });
-
     return (
 
         <div className="diary-container">
@@ -87,6 +84,8 @@ function NewDiaryEntry() {
                     value={entry.content}
                     onChange={handleInputChange}
                 />
+                <p>Please enter your diary entry prior to submitting</p>
+                
                 <button id="submit-button" disabled={disableButton} type="submit">Submit Entry</button>
             </form>
             </div>
@@ -97,3 +96,4 @@ function NewDiaryEntry() {
 }
 
 export default NewDiaryEntry; 
+
