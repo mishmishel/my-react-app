@@ -84,8 +84,8 @@ function NewDiaryEntry() {
                     value={entry.content}
                     onChange={handleInputChange}
                 />
-                <p>Please enter your diary entry prior to submitting</p>
-                
+                <p>Please enter your diary entry prior to submitting.</p>
+
                 <button id="submit-button" disabled={disableButton} type="submit">Submit Entry</button>
             </form>
             </div>
