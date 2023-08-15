@@ -14,7 +14,7 @@ function ViewDiaryEntries() {
             .then(data => setEntries(data))
     }, []);
 
-    const filteredEntries = entries.filter((entry) => {
+      const filteredEntries = entries.filter((entry) => {
         if (!startDate || !endDate) {
           return true; // If no date range is selected, show all entries
         }
@@ -31,9 +31,17 @@ function ViewDiaryEntries() {
             <h1>Look at Diary Entries!</h1> 
             <div className="date-filter">
                 <label className="date-text">Start Date:</label>
-                <input className="date-box" type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+                <input className="date-box" 
+                type="date" 
+                value={startDate} 
+                onChange={(e) => setStartDate(e.target.value)}
+                max={endDate} /* Maximum date that can be entered is end date */ />
                 <label className="date-text">End Date:</label>
-                <input className="date-box" type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+                <input className="date-box" 
+                type="date" 
+                value={endDate} 
+                onChange={(e) => setEndDate(e.target.value)}
+                min={startDate} /* Minimum date that can be entered is start date */ />
             </div>
             <div id="entries">{entryItems}</div>
         </div>
