@@ -42,8 +42,9 @@ function ViewDiaryEntries() {
                 value={endDate} 
                 onChange={(e) => setEndDate(e.target.value)}
                 min={startDate} /* Minimum date that can be entered is start date */ />
-            </div>
-            <div id="entries">{entryItems}</div>
+            </div> {/* Conditional rendering of entries or paragraph */}
+            {entryItems.length === 0 ? ( <p>No diary entries here! Select dates during which entries were made.</p> ) : 
+            ( <div id="entries">{entryItems}</div>)} 
         </div>
     );
 }
